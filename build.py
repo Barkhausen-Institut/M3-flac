@@ -14,7 +14,11 @@ def build(gen, env):
     ]
 
     # shut off warnings
-    env['CFLAGS'] += ['-Wno-sign-conversion']
+    env['CFLAGS'] += [
+        '-Wno-sign-conversion',
+        '-Wno-incompatible-pointer-types',
+        '-Wno-format',
+    ]
 
     files = [
         'src/libFLAC++/metadata.cpp',
