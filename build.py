@@ -1,5 +1,3 @@
-import os
-
 def build(gen, env):
     env = env.clone()
 
@@ -43,5 +41,5 @@ def build(gen, env):
         'src/libFLAC/window.c',
     ]
 
-    lib = env.static_lib(gen, out = 'flac', ins = files)
+    lib = env.static_lib(gen, out='flac', ins=files)
     env.install(gen, env['LIBDIR'], lib)
